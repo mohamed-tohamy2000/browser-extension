@@ -89,8 +89,8 @@ export default function Main() {
   ];
 
   return (
-    <div className="w-full h-[914px] gap-8 flex flex-col">
-      <div className=" w-full h-[46px] flex justify-between items-center">
+    <div className=" w-full h-[914px] gap-8 flex flex-col">
+      <div className=" w-full h-[104] md:h-[46px] gap-5 flex flex-wrap md:flex-nowrap justify-center md:justify-between items-center">
         <div className="w-60 h-[34px] text-[34px] font-bold ">
           <h1>Extensions List</h1>
         </div>
@@ -98,10 +98,10 @@ export default function Main() {
           <button className="w-16 btn h-full bg-[#F25C54] rounded-4xl btn-active border-2 ">
             All
           </button>
-          <button className="w-[95px] btn h-full bg-[#2F364B] rounded-4xl btn-active border-2 ">
+          <button className="w-[95px] btn h-full bg-white dark:bg-[#2F364B] rounded-4xl btn-active border-2 ">
             Active
           </button>
-          <button className="w-28 btn h-full bg-[#2F364B] rounded-4xl btn-active border-2 ">
+          <button className="w-28 btn h-full  bg-white dark:bg-[#2F364B] rounded-4xl btn-active border-2 ">
             Inactive
           </button>
         </div>
@@ -110,7 +110,7 @@ export default function Main() {
         {card.map((el, index) => (
           <div
             key={index}
-            className="flex justify-between flex-col  bg-[#202535] w-full h-[200px] p-5 rounded-2xl"
+            className="flex justify-between flex-col  bg-white dark:bg-[#2F364B] w-full h-[200px] p-5 rounded-2xl"
           >
             <div className=" flex w-full h-[76px] gap-4">
               <div className="w-[100px] h-[60px]">
@@ -127,8 +127,8 @@ export default function Main() {
               </button>
               <input
                 type="checkbox"
-                checked={el.isSub ? true : false}
-                className="toggle border-gray-600 bg-gray-500 checked:border-red-500 checked:bg-red-400 checked:text-white-800"
+                checked={el.isSub}
+                className="toggle  bg-[#535868] checked:border-red-500 checked:bg-red-400  checked:text-[#FBFDFE]"
               />
             </div>
           </div>
